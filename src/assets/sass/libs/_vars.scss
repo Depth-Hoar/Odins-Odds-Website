@@ -31,7 +31,7 @@
 
 // Palette.
 	$palette: (
-		bg:					#2e3842,
+		bg:					#212121,
 		fg:					#fff,
 		fg-bold:			#fff,
 		fg-light:			rgba(255,255,255,0.5),
@@ -41,10 +41,10 @@
 		border2-bg:			rgba(144,144,144,0.5),
 
 		accent1: (
-			bg:				#21b2a6,
+			bg:				#1E88E5,
 			fg-bold:		#ffffff,
-			fg:				mix(#21b2a6, #ffffff, 25%),
-			fg-light:		mix(#21b2a6, #ffffff, 40%),
+			fg:				mix(#1E88E5, #ffffff, 25%),
+			fg-light:		mix(#1E88E5, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -85,7 +85,7 @@
 		),
 
 		accent5: (
-			bg:				#505393,
+			bg:				#4CAF50,
 			fg-bold:		#ffffff,
 			fg:				mix(#505393, #ffffff, 25%),
 			fg-light:		mix(#505393, #ffffff, 40%),
@@ -96,20 +96,20 @@
 		),
 
 		accent6: (
-			bg:				#ed4933,
+			bg:				#FF5252,
 			fg-bold:		#ffffff,
-			fg:				mix(#ed4933, #ffffff, 25%),
-			fg-light:		mix(#ed4933, #ffffff, 40%),
+			fg:				mix(#FF5252, #ffffff, 25%),
+			fg-light:		mix(#FF5252, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
 			border2-bg:		rgba(255,255,255,0.2)
 		),
-
+// TEXT
 		accent7: (
-			bg:				#ffffff,
-			fg-bold:		#2E3842,
-			fg:				#4E4852,
+			bg:				#212121,
+			fg-bold:		#f7f7f7, // bold important
+			fg:				#E0E0E0, // regular text
 			fg-light:		#8E8892,
 			border:			#dfdfdf,
 			border-bg:		rgba(0,0,0,0.0375),
