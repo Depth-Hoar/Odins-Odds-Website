@@ -1,4 +1,5 @@
 const config = require('./config');
+require("dotenv").config();
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -7,6 +8,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -17,6 +19,11 @@ module.exports = {
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
         icon: config.manifestIcon, // This path is relative to the root of the site.
+      },
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT, 
+        timeout: 33500,
       },
     },
     'gatsby-plugin-sass',
