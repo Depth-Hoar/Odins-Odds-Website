@@ -201,7 +201,11 @@ const IndexPage = () => (
           </li>
         </ul>
       </div>
-      <MailChimpForm />
+    </section>
+    <section id="cta" className="wrapper style1">
+      <div >
+        <MailChimpForm />
+      </div>
     </section>
   </Layout>
 );
