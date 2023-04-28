@@ -37,16 +37,12 @@ const IndexPage = () => (
       <div className="inner">
         <header className="major">
           <h2>
-            Arcu aliquet vel lobortis ata nisl
+            Welcome to Odins Odds
             <br />
-            eget augue amet aliquet nisl cep donec
+            The ultimate platform for gaming intelligence and analytics
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
-            <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+          We bring prediction markets to the world of web3 gaming, enabling you to gain valuable insights and make informed decisions in real time. Join us today and experience a new level of gaming intelligence!
           </p>
         </header>
         <ul className="icons major">
@@ -75,14 +71,13 @@ const IndexPage = () => (
           <img src={pic1} alt="" />
         </div>
         <div className="content">
-          <h2>
+          {/* <h2>
             Magna primis lobortis
             <br />
             sed ullamcorper
-          </h2>
+          </h2> */}
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          Odins Odds is a pioneering platform that leverages the power of prediction markets to provide unprecedented insights into the world of web3 gaming. Our parimutuel-style market allows gamers to create and trade event markets, providing a wealth of information that can be analyzed in real time. Through our platform, you can gain insights into the type of event markets created, the variations of such, and the frequency around a particular game title, guild, or asset.
           </p>
         </div>
       </section>
@@ -91,14 +86,13 @@ const IndexPage = () => (
           <img src={pic2} alt="" />
         </div>
         <div className="content">
-          <h2>
+          {/* <h2>
             Tortor dolore feugiat
             <br />
             elementum magna
-          </h2>
+          </h2> */}
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          At Odins Odds, we believe that gamifying the vehicle to insights is the best way to gain valuable intelligence in the gaming space. By creating a protocol only focused on gaming in web3, we can conduct experiments through changes in the game economy and gameplay, resulting in new event markets that can be analyzed and traded. This not only benefits us as a platform, but also the gaming space as a whole.
           </p>
         </div>
       </section>
@@ -107,20 +101,19 @@ const IndexPage = () => (
           <img src={pic3} alt="" />
         </div>
         <div className="content">
-          <h2>
+          {/* <h2>
             Augue eleifend aliquet
             <br />
             sed condimentum
-          </h2>
+          </h2> */}
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          Join us today and discover a new world of gaming intelligence and analytics. With Odins Odds, you can gain unprecedented insights and make informed decisions to stay ahead of the game.
           </p>
         </div>
       </section>
     </section>
 
-    <section id="three" className="wrapper style3 special">
+    {/* <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
           <h2>Accumsan mus tortor nunc aliquet</h2>
@@ -177,7 +170,7 @@ const IndexPage = () => (
           </li>
         </ul>
       </div>
-    </section>
+    </section> */}
 
     <section id="cta" className="wrapper style4">
       <div className="inner">
