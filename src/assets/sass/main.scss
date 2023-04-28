@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:400,400italic,600,600italic,800,800italic');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel');
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
@@ -440,57 +440,57 @@
 		padding: 0.75em 1em;
 	}
 
-	input[type="checkbox"],
-	input[type="radio"], {
-		@include vendor('appearance', 'none');
-		display: block;
-		float: left;
-		margin-right: -2em;
-		opacity: 0;
-		width: 1em;
-		z-index: -1;
+input[type="checkbox"],
+input[type="radio"] {
+    @include vendor('appearance', 'none');
+    display: block;
+    float: left;
+    margin-right: -2em;
+    opacity: 0;
+    width: 1em;
+    z-index: -1;
 
-		& + label {
-			@include icon(false, solid);
-			color: _palette(fg);
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: _font(weight);
-			padding-left: (_size(element-height) * 0.6) + 0.75em;
-			padding-right: 0.75em;
-			position: relative;
+    & + label {
+        @include icon(false, solid);
+        color: _palette(fg);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: _font(weight);
+        padding-left: (_size(element-height) * 0.6) + 0.75em;
+        padding-right: 0.75em;
+        position: relative;
 
-			&:before {
-				background: _palette(border-bg);
-				border-radius: 3px;
-				content: '';
-				display: inline-block;
-				font-size: 0.8em;
-				height: (_size(element-height) * 0.75);
-				left: 0;
-				line-height: (_size(element-height) * 0.75);
-				position: absolute;
-				text-align: center;
-				top: 0;
-				width: (_size(element-height) * 0.75);
-			}
-		}
+        &:before {
+            background: _palette(border-bg);
+            border-radius: 3px;
+            content: '';
+            display: inline-block;
+            font-size: 0.8em;
+            height: (_size(element-height) * 0.75);
+            left: 0;
+            line-height: (_size(element-height) * 0.75);
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: (_size(element-height) * 0.75);
+        }
+    }
 
-		&:checked + label {
-			&:before {
-				background: _palette(bg);
-				color: _palette(fg-bold);
-				content: '\f00c';
-			}
-		}
+    &:checked + label {
+        &:before {
+            background: _palette(bg);
+            color: _palette(fg-bold);
+            content: '\f00c';
+        }
+    }
 
-		&:focus + label {
-			&:before {
-				box-shadow: 0 0 0 2px _palette(accent1, bg);
-			}
-		}
-	}
+    &:focus + label {
+        &:before {
+            box-shadow: 0 0 0 2px _palette(accent1, bg);
+        }
+    }
+}
 
 	input[type="checkbox"] {
 		& + label {
