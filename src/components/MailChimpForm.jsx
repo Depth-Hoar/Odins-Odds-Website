@@ -46,42 +46,49 @@ export default function MailChimpForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Box className={classes.formContainer}>
-        <TextField
-          id="outlined-email-input"
-          label="Email"
-          type="email"
-          name="email"
-          autoComplete="email"
-          variant="outlined"
-          onChange={handleChange}
-          className={classes.inputField}
-          InputProps={{ className: classes.input }}
-        />
-        <Button
-          variant="contained"
-          className={classes.button}
-          label="Submit"
-          type="submit"
-        >
-          <Typography variant="button">Sign Up</Typography>
-        </Button>
+    <div>
+      <Box textAlign="center" marginBottom={2}>
+        <Typography variant="subtitle1" color="error">
+          Get Future Updates
+        </Typography>
       </Box>
-      {result === "success" && (
-        <Box textAlign="center" marginTop={2}>
-          <Typography variant="subtitle1" color="primary">
-            Thank you for subscribing!
-          </Typography>
+      <form onSubmit={handleSubmit}>
+        <Box className={classes.formContainer}>
+          <TextField
+            id="outlined-email-input"
+            label="Email"
+            type="email"
+            name="email"
+            autoComplete="email"
+            variant="outlined"
+            onChange={handleChange}
+            className={classes.inputField}
+            InputProps={{ className: classes.input }}
+          />
+          <Button
+            variant="contained"
+            className={classes.button}
+            label="Submit"
+            type="submit"
+          >
+            <Typography variant="button">Sign Up</Typography>
+          </Button>
         </Box>
-      )}
-      {result === "error" && (
-        <Box textAlign="center" marginTop={2}>
-          <Typography variant="subtitle1" color="error">
-            Something went wrong. Please try again later.
-          </Typography>
-        </Box>
-      )}
-    </form>
+        {result === "success" && (
+          <Box textAlign="center" marginTop={2}>
+            <Typography variant="subtitle1" color="primary">
+              Thank you for subscribing!
+            </Typography>
+          </Box>
+        )}
+        {result === "error" && (
+          <Box textAlign="center" marginTop={2}>
+            <Typography variant="subtitle1" color="error">
+              Something went wrong. Please try again later.
+            </Typography>
+          </Box>
+        )}
+      </form>
+    </div>
   );
 }
