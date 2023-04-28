@@ -11,64 +11,77 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    marginBottom: theme.spacing(2),
   },
   inputField: {
     marginRight: theme.spacing(1),
     width: '40%',
     backgroundColor: '#000000',
-    color: '#ffffff', // Add this line to change the text color
+    color: '#ffffff', 
   },
   input: {
-    color: '#ffffff', // Add this line to change the text color
+    color: '#ffffff', 
   },
   button: {
-    backgroundColor: '#FF5252', // Replace with your desired color
+    backgroundColor: '#FF5252', 
     '&:hover': {
-      backgroundColor: '#FF6C6C', // Replace with your desired hover color
+      backgroundColor: '#FF6C6C', 
     },
   },
 }));
 
-// const textFieldStyle = {
-//   width: '40%', // You can change the width to any value you want
-//   backgroundColor: '#000000', // Change the background color to your desired color
-//   color: '#ffffff', // Change the background color to your desired color
-// };
+export default function MailChimpForm() {
+  const classes = useStyles();
+  const [email, setEmail] = useState("");
+  const [result, setResult] = useState("");
 
-  export default function MailChimpForm() {
-    const classes = useStyles();
-    const [email, setEmail] = useState("");
-    const [result, setResult] = useState("thank you");
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      let result = await addToMailchimp(email);
-      setResult(result);
-    };
-  
-    const handleChange = (event) => {
-      setEmail(event.target.value);
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let result = await addToMailchimp(email);
+    setResult(result.result);
+  };
 
-    return (
-      <form onSubmit={handleSubmit}>
-        <Box className={classes.formContainer}>
-          <TextField
-            id="outlined-email-input"
-            label="Email"
-            type="email"
-            name="email"
-            autoComplete="email"
-            variant="outlined"
-            onChange={handleChange}
-            className={classes.inputField}
-              InputProps={{className: classes.input}}
-          />
-          <Button variant="contained" className={classes.button} label="Submit" type="submit">
-            <Typography variant="button">Sign Up</Typography>
-          </Button>
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Box className={classes.formContainer}>
+        <TextField
+          id="outlined-email-input"
+          label="Email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          variant="outlined"
+          onChange={handleChange}
+          className={classes.inputField}
+          InputProps={{ className: classes.input }}
+        />
+        <Button
+          variant="contained"
+          className={classes.button}
+          label="Submit"
+          type="submit"
+        >
+          <Typography variant="button">Sign Up</Typography>
+        </Button>
+      </Box>
+      {result === "success" && (
+        <Box textAlign="center" marginTop={2}>
+          <Typography variant="subtitle1" color="primary">
+            Thank you for subscribing!
+          </Typography>
         </Box>
-      </form>
-    );
-  }
-
+      )}
+      {result === "error" && (
+        <Box textAlign="center" marginTop={2}>
+          <Typography variant="subtitle1" color="error">
+            Something went wrong. Please try again later.
+          </Typography>
+        </Box>
+      )}
+    </form>
+  );
+}
