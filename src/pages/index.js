@@ -172,7 +172,7 @@ const IndexPage = () => (
       </div>
     </section> */}
 
-    <section id="cta" className="wrapper style4">
+    {/* <section id="cta" className="wrapper style4">
       <div className="inner">
         <header>
           <h2>Arcue ut vel commodo</h2>
@@ -194,7 +194,7 @@ const IndexPage = () => (
           </li>
         </ul>
       </div>
-    </section>
+    </section> */}
     <section id="cta" className="wrapper style1">
       <div >
         <MailChimpForm />
