@@ -1928,9 +1928,10 @@ input[type="radio"] {
 			#banner,
 			.wrapper.style4 {
 				@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../images/banner.jpg")'));
-				background-position: center center;
+				background-attachment: scroll; // Add this line to change attachment to scroll on mobile
+				background-position: center top;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: auto 100%; // Update this line to adjust background size for mobile
 			}
 
 			#footer {
