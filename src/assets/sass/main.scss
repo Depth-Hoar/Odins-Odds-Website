@@ -1908,12 +1908,6 @@ input[type="radio"] {
 			padding-top: 0;
 		}
 
-		// Media query for mobile devices
-		@media (max-width: 767px) {
-			background-attachment: scroll; 
-			background-size: auto 100%; 
-		}
-
 		#footer {
 			background-color: darken(transparentize(_palette(bg), 0.1), 8);
 		}
