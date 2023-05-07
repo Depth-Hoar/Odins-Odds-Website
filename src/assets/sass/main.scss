@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Cinzel');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
@@ -1902,10 +1902,16 @@ input[type="radio"] {
 		#page-wrapper {
 			@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../images/banner.jpg")'));
 			background-attachment: fixed;
-			background-position: center center;
+			background-position: center top;
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding-top: 0;
+		}
+
+		// Media query for mobile devices
+		@media (max-width: 767px) {
+			background-attachment: scroll; 
+			background-size: auto 100%; 
 		}
 
 		#footer {
