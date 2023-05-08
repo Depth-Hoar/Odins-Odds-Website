@@ -8,9 +8,9 @@ export default function SideBar({ fullMenu }) {
       <h1>
         <Link to="/">Spectral</Link>
       </h1>
-      <div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>
-        <Nav onMenuToggle={() => toggleHeader(!headerOpen)} />
-      </div>
+      {/* <div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>
+        <Nav onMenuToggle={() => toggleHeader(!headerOpen)} /> hide menu for now
+      </div> */}
     </header>
   );
 }
