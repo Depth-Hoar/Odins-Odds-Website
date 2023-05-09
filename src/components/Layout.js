@@ -7,13 +7,6 @@ import '../assets/sass/main.scss';
 import Footer from './Footer';
 import SideBar from './Sidebar';
 
-// Mobile detection function
-function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
-
 class Layout extends Component {
   constructor(props) {
     super(props);
@@ -26,11 +19,6 @@ class Layout extends Component {
     this.timeoutId = setTimeout(() => {
       this.setState({ isPreloaded: false });
     }, 100);
-
-    // Add is-mobile class if the user is on a mobile device
-    if (isMobile()) {
-      document.body.classList.add('is-mobile');
-    }
   }
 
   componentWillUnmount() {
